@@ -47,7 +47,7 @@ import cv2
 import dlib
 import numpy
 
-PREDICTOR_PATH = "/home/matt/dlib-18.16/shape_predictor_68_face_landmarks.dat"
+PREDICTOR_PATH = "./data/shape_predictor_68_face_landmarks.dat"
 SCALE_FACTOR = 1 
 FEATHER_AMOUNT = 11
 
@@ -205,7 +205,6 @@ def process_images(imageIn1, imageIn2, imageOut):
         raise RuntimeError, "Image in 2 is not a string"
     if imageIn1 is str:
         raise RuntimeError, "Image out is not a string"
-
 
     im1, landmarks1 = read_im_and_landmarks(imageIn1)
     im2, landmarks2 = read_im_and_landmarks(imageIn2)
